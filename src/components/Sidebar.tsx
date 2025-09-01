@@ -144,10 +144,10 @@ const SideBar: React.FC = () => {
         </ListItemButton>
         <Collapse in={openUtilities && openDrawer} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }} component={Link} to="/utilities/Calculator">
+            <ListItemButton sx={{ pl: 4 }} component={Link} to="/utilities-Calculator">
               <ListItemText primary="Calculator" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }} component={Link} to="/utilities/unit-converter">
+            <ListItemButton sx={{ pl: 4 }} component={Link} to="/utilities-unit-converter">
               <ListItemText primary="Unit converter" />
             </ListItemButton>
           </List>

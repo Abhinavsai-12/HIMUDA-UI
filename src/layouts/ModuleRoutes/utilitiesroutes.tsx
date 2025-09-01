@@ -7,11 +7,11 @@ export const UtilitiesRoutes = [
 
   
   {
-    path: 'utilities/Calculator',
+    path: 'utilities-Calculator',
     element: <Calculator />,
   },
   {
-    path: 'utilities/unit-converter',
+    path: 'utilities-unit-converter',
     element: <UnitConverter/>,
   },
 
