@@ -6,63 +6,49 @@ import {
   TextField,
   Typography,
   Paper,
-  MenuItem,
-  Select,
-  FormControl,
-  InputLabel,
   Stack,
   useTheme,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-// Role options
-const roleOptions = ["admin", "employee"];
-
-const UsersAdd: React.FC = () => {
-  const [role, setRole] = React.useState("");
+const DefinitiveEstimateAdd: React.FC = () => {
   const navigate = useNavigate();
   const theme = useTheme();
 
   return (
     <Paper elevation={3} sx={{ p: 4 }}>
-
       {/* Title */}
       <Typography variant="h5" fontWeight="bold" gutterBottom>
-        Add Users
+        Add Definitive Estimate
       </Typography>
 
       <Box component="form" sx={{ mt: 3 }}>
-        {/* Row 1: Name + EMP Code */}
-        <Stack direction="row" spacing={2} mb={3}>
-          <TextField label="Name" name="name" fullWidth required />
-          <TextField label="EMP Code" name="empCode" fullWidth required />
-        </Stack>
-
-        {/* Remarks */}
+        {/* Name */}
         <TextField
-          label="Remarks"
-          name="remarks"
+          label="Name"
+          name="name"
           fullWidth
-          multiline
-          rows={2}
+          required
           sx={{ mb: 3 }}
         />
 
-        {/* Role Dropdown */}
-        <FormControl fullWidth sx={{ mb: 3 }}>
-          <InputLabel id="role-label">Role</InputLabel>
-          <Select
-            labelId="role-label"
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-          >
-            {roleOptions.map((r, idx) => (
-              <MenuItem key={idx} value={r}>
-                {r}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+        {/* Description */}
+        <TextField
+          label="Description"
+          name="description"
+          fullWidth
+          required
+          sx={{ mb: 3 }}
+        />
+
+        {/* Cost Book */}
+        <TextField
+          label="Cost Book"
+          name="costbook"
+          fullWidth
+          required
+          sx={{ mb: 3 }}
+        />
 
         {/* Action Buttons */}
         <Stack direction="row" spacing={2} mt={3}>
@@ -72,8 +58,9 @@ const UsersAdd: React.FC = () => {
               bgcolor: theme.palette.primary.main,
               color: theme.palette.primary.contrastText,
               "&:hover": { bgcolor: theme.palette.primary.dark },
+              minWidth: 120,
             }}
-            onClick={() => navigate("/users")}
+            onClick={() => navigate("/projects-definative-estimate")}
           >
             ADD
           </Button>
@@ -83,8 +70,9 @@ const UsersAdd: React.FC = () => {
               bgcolor: theme.palette.secondary.main,
               color: theme.palette.secondary.contrastText,
               "&:hover": { bgcolor: theme.palette.secondary.dark },
+              minWidth: 120,
             }}
-            onClick={() => navigate("/users")}
+            onClick={() => navigate("/projects-definative-estimate")}
           >
             CANCEL
           </Button>
@@ -94,4 +82,4 @@ const UsersAdd: React.FC = () => {
   );
 };
 
-export default UsersAdd;
+export default DefinitiveEstimateAdd;

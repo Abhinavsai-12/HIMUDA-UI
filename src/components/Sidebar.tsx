@@ -122,13 +122,13 @@ const SideBar: React.FC = () => {
         </ListItemButton>
         <Collapse in={openProjects && openDrawer} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }} component={Link} to="/definitive-estimate">
+            <ListItemButton sx={{ pl: 4 }} component={Link} to="/projects-definative-estimate">
               <ListItemText primary="Definitive estimate" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }} component={Link} to="/control-estimate">
+            <ListItemButton sx={{ pl: 4 }} component={Link} to="/projects-control-Estimate">
               <ListItemText primary="Control estimate" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }} component={Link} to="/tenders">
+            <ListItemButton sx={{ pl: 4 }} component={Link} to="/projects-tenders">
               <ListItemText primary="Tenders" />
             </ListItemButton>
           </List>
@@ -144,10 +144,10 @@ const SideBar: React.FC = () => {
         </ListItemButton>
         <Collapse in={openUtilities && openDrawer} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }} component={Link} to="/calculator">
+            <ListItemButton sx={{ pl: 4 }} component={Link} to="/utilities/Calculator">
               <ListItemText primary="Calculator" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }} component={Link} to="/unit-converter">
+            <ListItemButton sx={{ pl: 4 }} component={Link} to="/utilities/unit-converter">
               <ListItemText primary="Unit converter" />
             </ListItemButton>
           </List>

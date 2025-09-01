@@ -25,6 +25,10 @@ import { ReportsCostingMasterRoutes } from './ModuleRoutes/Reportsroutes';
 import { CostbooksRoutes } from './ModuleRoutes/costbooksroutes';
 import { BidderRoutes } from './ModuleRoutes/bidderroutes';
 import { DocumentRoutes } from './ModuleRoutes/documentsroutes';
+import { UtilitiesRoutes } from './ModuleRoutes/utilitiesroutes';
+import { TenderRoutes } from './ModuleRoutes/tendersroutes';
+import { ControlEstimateRoutes } from './ModuleRoutes/control-estimate-routes';
+import { DefinativeEstimateRoutes } from './ModuleRoutes/definativeestimateRoutes';
 
 const AppRoutes = () => (
   <Routes>
@@ -36,6 +40,10 @@ const AppRoutes = () => (
         ...UsersRoutes,
         ...DocumentRoutes,
         ...BidderRoutes,
+        ...UtilitiesRoutes,
+        ...TenderRoutes,
+        ...ControlEstimateRoutes,
+        ...DefinativeEstimateRoutes,
         ...ReportsCostingMasterRoutes,
         ...projectRoutes,
         ...inviteTenderRoutes,
