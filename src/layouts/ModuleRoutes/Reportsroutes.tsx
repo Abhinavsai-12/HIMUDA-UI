@@ -3,6 +3,9 @@ import Assemblies from '@/components/ReportsPage/costing-master/assembliesMain';
 import AssembliesSigningAdd from '@/components/ReportsPage/costing-master/assembliesAdd';
 import ResourcesMain from '@/components/ReportsPage/costing-master/ResourcesMain';
 import ResourcesAdd from '@/components/ReportsPage/costing-master/ResourcesAdd';
+import TendersReport from '@/components/ReportsPage/Projects-pages/tenderspage';
+import ControlEstimateReport from '@/components/ReportsPage/Projects-pages/controlestimate';
+import DefinativeEstimateReport from '@/components/ReportsPage/Projects-pages/definativeestimate';
 
 
 export const ReportsCostingMasterRoutes = [
@@ -26,6 +29,29 @@ export const ReportsCostingMasterRoutes = [
     path: 'reports/costing-master-resources/create',
     element: <ResourcesAdd />,
   },
+
+
+// Projects
+  {
+    path: 'reports/projects-tenders-report',
+    element: <TendersReport />,
+  },
+  {
+    path: 'reports/projects-control-estimate-report',
+    element: <ControlEstimateReport />,
+  },
+  {
+    path: 'reports/projects-definative-estimate-report',
+    element: <DefinativeEstimateReport />,
+  },
+
+
+
+
+
+
+
+
 ];
 
 

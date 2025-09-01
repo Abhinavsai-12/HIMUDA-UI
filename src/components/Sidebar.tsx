@@ -196,13 +196,13 @@ const SideBar: React.FC = () => {
             <ListItemButton sx={{ pl: 4 }} >
               <ListItemText primary="Projects" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 6 }} component={Link} to="/reports/projects/definitive">
+            <ListItemButton sx={{ pl: 6 }} component={Link} to="/reports/projects-definative-estimate-report">
               <ListItemText primary="Definitive estimate" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 6 }} component={Link} to="/reports/projects/control">
+            <ListItemButton sx={{ pl: 6 }} component={Link} to="/reports/projects-control-estimate-report">
               <ListItemText primary="Control estimate" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 6 }} component={Link} to="/reports/projects/tenders">
+            <ListItemButton sx={{ pl: 6 }} component={Link} to="/reports/projects-tenders-report">
               <ListItemText primary="Tenders" />
             </ListItemButton>
           </List>
@@ -221,16 +221,7 @@ const SideBar: React.FC = () => {
 
       <Box sx={{ flexGrow: 1 }} />
       <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon sx={{ color: '#fff' }}>
-              <Settings />
-            </ListItemIcon>
-            {openDrawer && <ListItemText primary="Settings" />}
-          </ListItemButton>
-        </ListItem>
-      </List>
+      
     </Drawer>
   );
 };
